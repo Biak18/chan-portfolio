@@ -24,10 +24,10 @@ function PanelSection({
 export function ProjectPanel({ project }: { project: Project }) {
   return (
     <div>
-      <h2 className="font-display text-2xl font-semibold text-foreground">
+      <h2 className="font-display text-2xl font-semibold text-foreground flex-wrap">
         {project.title}
       </h2>
-      <p className="mt-3 text-base leading-relaxed text-muted">
+      <p className="mt-3 text-base leading-relaxed text-muted flex-wrap">
         {project.overview}
       </p>
 
