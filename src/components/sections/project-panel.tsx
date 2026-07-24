@@ -39,7 +39,7 @@ export function ProjectPanel({ project }: { project: Project }) {
             rel="noreferrer"
             className={buttonVariants("secondary")}
           >
-            <GithubIcon width={16} height={16} /> Repository
+            <GithubIcon width={16} height={16} /> Repository2
           </a>
         )}
         {/* <a
