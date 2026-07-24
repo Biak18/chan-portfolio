@@ -25,7 +25,7 @@ export function Hero() {
   return (
     <section
       id="home"
-      className="mx-auto flex min-h-[60vh] max-w-3xl flex-col justify-end px-6 py-10 sm:px-8"
+      className="mx-auto flex min-h-[70vh] max-w-3xl flex-col justify-end px-6 py-10 sm:px-8"
     >
       <motion.div variants={variants} initial="hidden" animate="show">
         <motion.p
