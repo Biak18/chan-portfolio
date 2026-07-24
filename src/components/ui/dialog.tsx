@@ -91,18 +91,18 @@ export function Dialog({
               ref={panelRef}
               className="flex h-full min-w-0 flex-col overflow-y-auto overscroll-contain bg-background sm:border-l sm:border-border"
             >
-              <div className="sticky top-0 z-10 flex shrink-0 justify-end bg-background/95 p-4 backdrop-blur-md">
+              <div className="relative flex h-full min-w-0 flex-col overflow-y-auto overscroll-contain bg-background sm:border-l sm:border-border">
                 <button
                   ref={closeButtonRef}
                   onClick={() => onOpenChange(false)}
                   aria-label="Close"
-                  className="flex h-9 w-9 items-center justify-center rounded-full text-muted transition-colors hover:bg-surface hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+                  className="absolute left-4 top-4 z-20 flex h-9 w-9 items-center justify-center rounded-full bg-background/95 text-muted backdrop-blur-md transition-colors hover:bg-surface hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
                 >
                   <X size={18} />
                 </button>
-              </div>
-              <div className="min-w-0 break-words px-6 pb-12 sm:px-8">
-                {children}
+                <div className="min-w-0 wrap-break-word px-6 pb-16 pt-16 sm:px-8">
+                  {children}
+                </div>
               </div>
             </div>
           </motion.div>
