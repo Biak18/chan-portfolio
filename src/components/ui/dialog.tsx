@@ -87,7 +87,10 @@ export function Dialog({
             transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
             className="fixed inset-y-0 right-0 z-50 w-full max-w-full sm:max-w-xl"
           >
-            <div ref={panelRef}>
+            <div
+              ref={panelRef}
+              className="flex h-full min-w-0 flex-col overflow-y-auto overscroll-contain bg-background sm:border-l sm:border-border"
+            >
               <div className="relative flex h-full min-w-0 flex-col overflow-y-auto overscroll-contain bg-background sm:border-l sm:border-border">
                 <button
                   ref={closeButtonRef}
@@ -97,7 +100,7 @@ export function Dialog({
                 >
                   <X size={18} />
                 </button>
-                <div className="flex-wrap px-6 pb-16 pt-16 sm:px-8">
+                <div className="min-w-0 wrap-break-word px-6 pb-16 pt-16 sm:px-8">
                   {children}
                 </div>
               </div>
