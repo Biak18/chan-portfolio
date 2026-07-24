@@ -33,26 +33,32 @@ export function Dialog({
             </RadixDialog.Overlay>
 
             <RadixDialog.Content asChild forceMount>
+              {/* This element owns ONLY positioning + the slide transform.
+                  No overflow, no flex, no sticky descendants — keeps it
+                  isolated from the sticky/transform interaction bug. */}
               <motion.div
                 layoutId={layoutId}
                 initial={{ x: "100%" }}
                 animate={{ x: 0 }}
                 exit={{ x: "100%" }}
                 transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-                className={cn(
-                  "fixed inset-y-0 right-0 z-50 flex h-dvh w-full flex-col overflow-y-auto bg-background",
-                  "sm:border-l sm:border-border",
-                )}
+                className="fixed inset-y-0 right-0 z-50 w-full max-w-full sm:max-w-xl"
               >
-                <div className="sticky top-0 z-10 flex justify-end bg-background/80 p-4 backdrop-blur-md">
-                  <RadixDialog.Close
-                    aria-label="Close"
-                    className="flex h-9 w-9 items-center justify-center rounded-full text-muted transition-colors hover:bg-surface hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
-                  >
-                    <X size={18} />
-                  </RadixDialog.Close>
+                {/* Scroll + sticky live here instead — a plain, untransformed
+                    element, so `position: sticky` resolves normally. */}
+                <div className="flex h-full min-w-0 flex-col overflow-y-auto overscroll-contain bg-background sm:border-l sm:border-border">
+                  <div className="sticky top-0 z-10 flex shrink-0 justify-end bg-background/95 p-4 backdrop-blur-md">
+                    <RadixDialog.Close
+                      aria-label="Close"
+                      className="flex h-9 w-9 items-center justify-center rounded-full text-muted transition-colors hover:bg-surface hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+                    >
+                      <X size={18} />
+                    </RadixDialog.Close>
+                  </div>
+                  <div className="min-w-0 break-words px-6 pb-12 sm:px-8">
+                    {children}
+                  </div>
                 </div>
-                <div className="px-6 pb-12 sm:px-8">{children}</div>
               </motion.div>
             </RadixDialog.Content>
           </RadixDialog.Portal>

@@ -1,41 +1,9 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { siteConfig } from "../../data/site-config";
-import {
-  GithubIcon,
-  LinkedinIcon,
-  TelegramIcon,
-  FacebookIcon,
-} from "../ui/icons";
+import { siteConfig, socials } from "../../data/site-config";
+
 import { Mail } from "lucide-react";
 import { buttonVariants } from "../ui/button";
-
-const socials = [
-  {
-    label: "GitHub",
-    href: siteConfig.links.github,
-    Icon: GithubIcon,
-    brand: "#181717",
-  },
-  {
-    label: "LinkedIn",
-    href: siteConfig.links.linkedin,
-    Icon: LinkedinIcon,
-    brand: "#0A66C2",
-  },
-  {
-    label: "Telegram",
-    href: siteConfig.links.telegram,
-    Icon: TelegramIcon,
-    brand: "#26A5E4",
-  },
-  {
-    label: "Facebook",
-    href: siteConfig.links.facebook,
-    Icon: FacebookIcon,
-    brand: "#1877F2",
-  },
-];
 
 type FormState = "idle" | "submitting" | "success" | "error";
 
