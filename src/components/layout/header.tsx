@@ -5,6 +5,7 @@ import { navItems } from "../../data/site-config";
 import { useActiveSection } from "../../hooks/use-active-section";
 import { cn } from "../../lib/utils";
 import { ThemeToggle } from "../ui/theme-toggle";
+import { useScrollLock } from "../../hooks/use-scroll-lock";
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -18,12 +19,14 @@ export function Header() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  useEffect(() => {
-    document.body.style.overflow = menuOpen ? "hidden" : "";
-    return () => {
-      document.body.style.overflow = "";
-    };
-  }, [menuOpen]);
+  // useEffect(() => {
+  //   document.body.style.overflow = menuOpen ? "hidden" : "";
+  //   return () => {
+  //     document.body.style.overflow = "";
+  //   };
+  // }, [menuOpen]);
+
+  useScrollLock(menuOpen);
 
   return (
     <header

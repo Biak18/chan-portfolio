@@ -24,7 +24,7 @@ export const projects: Project[] = [
     title: "ENOTES",
     summary: "Enterprise ERP system with a WinForms front end and Supabase backend.",
     overview:
-      "An ERP system built as a desktop application — handles core business operations with a WinForms front end and Supabase as the backend. Currently in active development.",
+      "An ERP system built as a desktop application, handles core business operations with a WinForms front end and Supabase as the backend. Currently in active development.",
     thumbnail:
       "https://drtqywayjiarysxxbrci.supabase.co/storage/v1/object/public/project-images/enotes.png",
     techStack: ["C#", ".NET Framework", "WinForms", "Devexpress", "Devexpress Xtra Report", "Supabase"],
@@ -43,7 +43,7 @@ export const projects: Project[] = [
     title: "Shadowolio",
     summary: "A neubrutalist-tactile design system for React Native.",
     overview:
-      "A neubrutalist-tactile design system for React Native — hard offset shadows, press-to-sink buttons, and recessed inputs that all react like physical objects instead of flat UI.",
+      "A neubrutalist-tactile design system for React Native, hard offset shadows, press-to-sink buttons, and recessed inputs that all react like physical objects instead of flat UI.",
     thumbnail:
       "https://drtqywayjiarysxxbrci.supabase.co/storage/v1/object/public/project-images/shadow.jpg",
     techStack: ["React Native", "Reanimated", "Zustand", "Expo"],
