@@ -2,7 +2,6 @@ import * as RadixDialog from "@radix-ui/react-dialog";
 import { AnimatePresence, motion } from "framer-motion";
 import { X } from "lucide-react";
 import type { ReactNode } from "react";
-import { cn } from "../../lib/utils";
 
 type DialogProps = {
   open: boolean;
@@ -55,7 +54,7 @@ export function Dialog({
                       <X size={18} />
                     </RadixDialog.Close>
                   </div>
-                  <div className="min-w-0 break-words px-6 pb-12 sm:px-8">
+                  <div className="min-w-0 wrap-break-word px-6 pb-12 sm:px-8">
                     {children}
                   </div>
                 </div>

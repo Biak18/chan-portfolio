@@ -6,7 +6,7 @@ export const siteConfig = {
     footerTagline: "Building mobile apps with React Native, Expo & Supabase.",
   currentFocus: "Currently building with React Native, Expo & Supabase",
   links: {
-    resume: "https://drive.google.com/file/d/1D0JAUehLQLB9zTDrkeU_oKQ4DYRyfu5S/view?usp=drivesdk", // TODO: drop your actual PDF into /public
+    resume: "https://canva.link/xsin8184084x9fn", 
     github: "https://github.com/Biak18",
      linkedin: "https://www.linkedin.com/in/chan-0b65b926a",
     telegram: "https://t.me/BiakThanCeu",
