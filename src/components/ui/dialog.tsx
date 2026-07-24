@@ -40,7 +40,7 @@ export function Dialog({
                 exit={{ x: "100%" }}
                 transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
                 className={cn(
-                  "fixed inset-y-0 right-0 z-50 flex h-dvh w-full flex-col overflow-y-auto bg-background",
+                  "fixed inset-y-0 right-0 z-50 flex h-dvh w-dvw flex-col overflow-y-auto bg-background",
                   "sm:max-w-xl sm:border-l sm:border-border",
                 )}
               >
