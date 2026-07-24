@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", "Inter", ui-sans-serif, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", monospace;
+}
+
+:root {
+  --color-background: #ffffff;
+  --color-surface: #f8f9fb;
+  --color-foreground: #0a0a0a;
+  --color-muted: #6b7280;
+  --color-border: #e5e7eb;
+  --color-accent: #2563eb;
+  --color-accent-foreground: #ffffff;
+}
+
+.dark {
+  --color-background: #0a0a0a;
+  --color-surface: #111214;
+  --color-foreground: #f5f5f5;
+  --color-muted: #9ca3af;
+  --color-border: #262626;
+  --color-accent: #3b82f6;
+  --color-accent-foreground: #0a0a0a;
+}
+
+@theme inline {
+  --color-background: var(--color-background);
+  --color-surface: var(--color-surface);
+  --color-foreground: var(--color-foreground);
+  --color-muted: var(--color-muted);
+  --color-border: var(--color-border);
+  --color-accent: var(--color-accent);
+  --color-accent-foreground: var(--color-accent-foreground);
+}
+
+* {
+  border-color: var(--color-border);
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Enable view transition customization for the root document */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 0.6s;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* The old theme stays frozen underneath */
+::view-transition-old(root) {
+  z-index: 1;
+}
+
+/* The new theme expands in a circle from the top-right corner */
+::view-transition-new(root) {
+  z-index: 2;
+  animation-name: circle-expand;
+}
+
+@keyframes circle-expand {
+  from {
+    clip-path: circle(0% at top right);
+  }
+  to {
+    /* 150% radius ensures the circle expands far enough to reach the opposite bottom-left corner */
+    clip-path: circle(150% at top right);
+  }
+}
