@@ -2,7 +2,7 @@ export const siteConfig = {
   name: "Chan Toe Whan",
   role: "Software Developer",
   tagline:
-    "I build cross-platform mobile apps with React Native and Expo — focused on clean architecture and interactions that feel as good as they work.",
+    "I build cross-platform mobile apps with React Native and Expo focused on clean architecture and interactions that feel as good as they work.",
     footerTagline: "Building mobile apps with React Native, Expo & Supabase.",
   currentFocus: "Currently building with React Native, Expo & Supabase",
   links: {

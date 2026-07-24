@@ -136,7 +136,7 @@ export function Contact() {
 
         {state === "success" && (
           <p role="status" className="text-sm text-accent">
-            Message sent — I'll get back to you soon.
+            Message sent! I'll get back to you soon.
           </p>
         )}
         {state === "error" && (
