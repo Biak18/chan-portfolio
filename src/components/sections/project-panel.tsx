@@ -1,4 +1,4 @@
-import { SquareArrowOutUpRight } from "lucide-react";
+import { SquareArrowOutUpRight, Smartphone } from "lucide-react";
 import type { Project } from "../../types/project";
 import { GithubIcon } from "../ui/icons";
 import { Chip } from "../ui/chip";
@@ -58,6 +58,16 @@ export function ProjectPanel({ project }: { project: Project }) {
             className={buttonVariants("primary")}
           >
             <SquareArrowOutUpRight size={16} /> Live demo
+          </a>
+        )}
+        {project.androidDownloadUrl && (
+          <a
+            href={project.androidDownloadUrl}
+            target="_blank"
+            rel="noreferrer"
+            className={buttonVariants("secondary")}
+          >
+            <Smartphone size={16} /> Download for Android
           </a>
         )}
       </div>

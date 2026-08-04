@@ -11,5 +11,6 @@ export type Project = {
     lessonsLearned: string;
    githubUrl?: string;
     liveUrl?: string;
+    androidDownloadUrl?: string;
     featured?: boolean;
   };

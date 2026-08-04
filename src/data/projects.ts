@@ -16,8 +16,9 @@ export const projects: Project[] = [
       "Handling real-world edge cases in production: persistent background FCM process kills on China ROMs (HyperOS / Turbo 4) requiring custom autostart prompts, Android bottom-sheet snap point glitches, edge function time zone misalignment for Myanmar (UTC+6:30), and silent push notification drops caused by stale device tokens after switching EAS build profiles.",
     lessonsLearned:
       "Software isn’t built for pristine test suites. it’s built for real people on unpredictable devices and unstable networks. From battery-saver OS rules to time zone offsets, the hardest bugs never showed up in the emulator. Designing local-first taught me that true reliability comes from building software that respects the user's connection, not software that demands it.",
-    githubUrl: undefined, // private repo — no public URL provided
+    githubUrl: "https://github.com/Biak18/City-Youth-Contacts", // private repo — no public URL provided
     liveUrl: undefined,
+    androidDownloadUrl: "https://github.com/Biak18/City-Youth-Contacts/releases/download/v1.0.1/CityYouth.apk", 
   },
   {
     slug: "enotes",
@@ -56,5 +57,6 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/Biak18/shadow",
     liveUrl: undefined,
     featured: true,
+    androidDownloadUrl: "https://github.com/Biak18/shadow/releases/download/v1.0.0/shadowolio.apk", 
   },
 ];
