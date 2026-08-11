@@ -94,6 +94,18 @@ export function ProjectPanel({ project }: { project: Project }) {
         </div>
       </PanelSection>
 
+      {project.keyFeatures && (
+        <PanelSection title="Key Features">
+          <ul className="space-y-1.5">
+            {project.keyFeatures.map((feature) => (
+              <li key={feature} className="flex gap-2">
+                <span className="text-accent">·</span>
+                <span>{feature}</span>
+              </li>
+            ))}
+          </ul>
+        </PanelSection>
+      )}
       <PanelSection title="Architecture">{project.architecture}</PanelSection>
       <PanelSection title="Challenges">{project.challenges}</PanelSection>
       <PanelSection title="Lessons Learned">

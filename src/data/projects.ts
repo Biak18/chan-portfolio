@@ -59,4 +59,54 @@ export const projects: Project[] = [
     featured: true,
     androidDownloadUrl: "https://github.com/Biak18/shadow/releases/download/v1.0.0/shadowolio.apk", 
   },
+  {
+  slug: "stockflow",
+  title: "StockFlow",
+  summary:
+  "Production-oriented inventory management app for small businesses, with offline sync, team workspaces, and multi-tenant data isolation.",
+  overview:
+    "A React Native (Expo) inventory app for small businesses to manage products, stock movements, categories, and suppliers. It supports multi-tenant organizations with role-based access, offline-first workflows with a SQLite sync queue, barcode scanning, low-stock notifications, and team invites — designed as a real product architecture rather than a tutorial demo.",
+  thumbnail: "https://bgqrgzyyeycmkvaiagfo.supabase.co/storage/v1/object/public/sample/android-icon-foreground.png", // TODO: add
+  screenshots: [
+    "https://bgqrgzyyeycmkvaiagfo.supabase.co/storage/v1/object/public/sample/sf_login.jpg",
+    "https://bgqrgzyyeycmkvaiagfo.supabase.co/storage/v1/object/public/sample/sf_signup.jpg",
+    "https://bgqrgzyyeycmkvaiagfo.supabase.co/storage/v1/object/public/sample/sf_dashboard.jpg",
+    "https://bgqrgzyyeycmkvaiagfo.supabase.co/storage/v1/object/public/sample/sf_products.jpg",
+    "https://bgqrgzyyeycmkvaiagfo.supabase.co/storage/v1/object/public/sample/sf_stock.jpg",
+    "https://bgqrgzyyeycmkvaiagfo.supabase.co/storage/v1/object/public/sample/sf_settings.jpg"
+  ], // TODO: add
+  techStack: [
+ "React Native",
+    "Expo SDK 56",
+    "Expo Router",
+    "TypeScript",
+    "Supabase",
+    "PostgreSQL + RLS",
+    "Zustand",
+    "React Hook Form",
+    "Zod",
+    "Expo SQLite",
+    "Expo Notifications",
+    "Reanimated",
+    "FlashList",
+  ],
+keyFeatures: [
+    "Multi-tenant organizations with Postgres Row Level Security",
+    "Team invites (email via Edge Function + Resend), members, and roles (Owner / Admin / Member)",
+    "Offline-first products and stock movements with SQLite + sync queue (including queued image uploads)",
+    "Barcode scanning for product lookup and create-with-prefill",
+    "Stock in / out / adjust with movement history",
+    "Dashboard metrics, low-stock alerts (local + remote push), and CSV reports",
+  ],
+architecture:
+    "Feature-based architecture organized by domain (auth, products, inventory, categories, suppliers, team) rather than by file type. The UI talks to repository/service interfaces that target Supabase online and fall back to Expo SQLite offline, enqueueing writes for automatic flush when connectivity returns. Multi-tenancy is enforced in the database: business tables are scoped by organization_id, membership is tracked in organization_members, and access is controlled with RLS helpers plus SECURITY DEFINER RPCs for privileged flows (create organization, accept invite, update/remove members). Auth routing uses a boot gate and Expo Router Protected screens so session and workspace resolution complete before the main tree mounts.",
+  challenges:
+    "Offline sync and RLS were the hardest areas. Early product sync failed when local-only fields such as local_image_uri were sent to Supabase (PostgREST schema cache errors), which required stripping device-only columns before upsert and keeping image uploads as separate queue jobs. RLS policies that subquery organization_members from within organization_members caused infinite recursion; the fix was SECURITY DEFINER helpers (is_org_member / is_org_admin) used by policies instead of recursive SELECTs. Auth also flashed create-organization during login until membership resolution was gated behind isResolvingOrg and Protected routes instead of competing useEffect redirects.",
+  lessonsLearned:
+    "Building StockFlow deepened practical experience with Supabase RLS and secure multi-tenant design — scoping data by organization, role-based access, and privileged RPCs without exposing the service role in the client. It also reinforced offline-first mobile patterns (SQLite cache, sync queue, conflict handling on unique constraints), Expo production concerns (dev clients, FCM / google-services, Edge Functions), and maintainable React Native structure with clear repository boundaries and predictable auth boot flow.",
+  githubUrl: "https://github.com/Biak18/StockFlow",
+  liveUrl: undefined, // not yet published per your own roadmap
+  androidDownloadUrl: undefined, // not yet published per your own roadmap
+  featured: true,
+},
 ];

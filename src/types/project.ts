@@ -6,6 +6,7 @@ export type Project = {
     thumbnail: string;
   screenshots?: string[];
     techStack: string[];
+    keyFeatures?: string[];
     architecture: string;
     challenges: string;
     lessonsLearned: string;
