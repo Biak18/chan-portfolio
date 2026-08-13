@@ -13,10 +13,7 @@ const fadeUp = {
 
 export function About() {
   return (
-    <section
-      id="about"
-      className="mx-auto max-w-5xl px-6 py-10 sm:px-6 sm:py-10"
-    >
+    <section id="about" className="mx-auto max-w-5xl px-6 py-6 sm:px-6 sm:py-6">
       <motion.p
         initial={{ opacity: 0, y: 12 }}
         whileInView={{ opacity: 1, y: 0 }}

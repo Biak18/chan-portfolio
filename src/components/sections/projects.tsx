@@ -11,14 +11,14 @@ export function Projects() {
   return (
     <section
       id="projects"
-      className="mx-auto max-w-5xl px-6 py-10 sm:px-6 sm:py-10"
+      className="mx-auto max-w-5xl px-6 py-6 sm:px-6 sm:py-6"
     >
       <p className="mb-4 font-mono text-sm text-accent">Projects</p>
       <h2 className="font-display text-2xl font-semibold text-foreground sm:text-3xl">
         Things I've built
       </h2>
 
-      <div className="mt-12 grid gap-6 sm:grid-cols-2">
+      <div className="mt-4 grid gap-6 sm:grid-cols-2">
         {projects.map((project) => (
           <ProjectCard
             key={project.slug}

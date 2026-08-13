@@ -12,8 +12,10 @@ export default function App() {
   return (
     <ThemeProvider>
       <Header />
-      <main className="pt-16">
-        <Hero />
+      <main>
+        <div className="mt-16">
+          <Hero />
+        </div>
         <About />
         <Projects />
         <Experience />

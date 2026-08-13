@@ -41,7 +41,7 @@ export function Contact() {
   return (
     <section
       id="contact"
-      className="mx-auto max-w-2xl px-6 py-10 sm:px-6 sm:py-10"
+      className="mx-auto max-w-2xl px-6 py-6 sm:px-6 sm:py-6"
     >
       <p className="mb-4 font-mono text-sm text-accent">Contact</p>
       <h2 className="font-display text-2xl font-semibold text-foreground sm:text-3xl">
@@ -82,7 +82,7 @@ export function Contact() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-80px" }}
         transition={{ duration: 0.4 }}
-        className="mt-12 space-y-4"
+        className="mt-6 space-y-4"
       >
         <div>
           <label htmlFor="name" className="text-sm font-medium text-foreground">

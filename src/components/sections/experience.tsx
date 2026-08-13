@@ -6,14 +6,14 @@ export function Experience() {
   return (
     <section
       id="experience"
-      className="mx-auto max-w-3xl px-6 py-10 sm:px-6 sm:py-10"
+      className="mx-auto max-w-3xl px-6 py-6 sm:px-6 sm:py-6"
     >
       <p className="mb-4 font-mono text-sm text-accent">Experience</p>
       <h2 className="font-display text-2xl font-semibold text-foreground sm:text-3xl">
         How I got here
       </h2>
 
-      <div className="mt-12 space-y-10 border-l border-border pl-8">
+      <div className="mt-4 space-y-10 border-l border-border pl-8">
         {experience.map((entry, i) => (
           <motion.div
             key={entry.id}
@@ -24,7 +24,7 @@ export function Experience() {
             className="relative"
           >
             <span
-              className="absolute -left-[calc(2rem+5px)] top-1.5 h-2.5 w-2.5 rounded-full bg-accent"
+              className="absolute -left-9.25 top-1.5 h-2.5 w-2.5 rounded-full bg-accent"
               aria-hidden="true"
             />
             <p className="font-mono text-xs text-muted">{entry.period}</p>

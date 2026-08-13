@@ -6,14 +6,14 @@ export function Skills() {
   return (
     <section
       id="skills"
-      className="mx-auto max-w-3xl px-6 py-10 sm:px-6 sm:py-10"
+      className="mx-auto max-w-3xl px-6 py-6 sm:px-6 sm:py-6"
     >
       <p className="mb-4 font-mono text-sm text-accent">Skills</p>
       <h2 className="font-display text-2xl font-semibold text-foreground sm:text-3xl">
         Technologies I work with
       </h2>
 
-      <div className="mt-12 space-y-8">
+      <div className="mt-8 space-y-8">
         {skillGroups.map((group, i) => (
           <motion.div
             key={group.category}
