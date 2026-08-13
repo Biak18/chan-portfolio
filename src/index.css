@@ -58,19 +58,17 @@ body {
 /* Enable view transition customization for the root document */
 ::view-transition-old(root),
 ::view-transition-new(root) {
-  animation-duration: 0.6s;
-  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  animation: none;
+  mix-blend-mode: normal;
 }
 
-/* The old theme stays frozen underneath */
 ::view-transition-old(root) {
   z-index: 1;
 }
 
-/* The new theme expands in a circle from the top-right corner */
 ::view-transition-new(root) {
   z-index: 2;
-  animation-name: circle-expand;
+  animation: circle-expand 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 @keyframes circle-expand {
@@ -78,7 +76,6 @@ body {
     clip-path: circle(0% at top right);
   }
   to {
-    /* 150% radius ensures the circle expands far enough to reach the opposite bottom-left corner */
     clip-path: circle(150% at top right);
   }
 }
