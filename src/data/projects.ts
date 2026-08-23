@@ -8,7 +8,7 @@ export const projects: Project[] = [
     overview:
       "An offline-first contact directory storing phone, birthday, and address info for a local youth community. Works fully offline via SQLite and syncs with Supabase, with birthday reminders delivered through Supabase Edge Functions and Firebase Cloud Messaging push notifications.",
     thumbnail:
-      "https://drtqywayjiarysxxbrci.supabase.co/storage/v1/object/public/project-images/ccc.jpg",
+      "https://drtqywayjiarysxxbrci.supabase.co/storage/v1/object/public/project-images/ccc/ccc.png",
     techStack: ["React Native", "Expo", "Supabase", "SQLite", "Supabase Edge Functions", "Firebase Cloud Messaging"],
     architecture:
       "Built on a local-first SQLite mirror for zero-latency reads and offline writes with dirty-flag tracking (`synced = 0`). Sync runs bidirectionally on connectivity restore and app focus, using a 3-second `Promise.race` safety timeout to prevent hanging UI spinners in spotty network zones. Scheduled push notifications run via Supabase `pg_cron` hitting Edge Functions, with a daily `net.http_get` ping to prevent free-tier project auto-pausing.",
@@ -19,6 +19,10 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/Biak18/City-Youth-Contacts", // private repo — no public URL provided
     liveUrl: undefined,
     androidDownloadUrl: "https://github.com/Biak18/City-Youth-Contacts/releases/download/v1.0.1/CityYouth.apk", 
+    screenshots: [
+      "https://drtqywayjiarysxxbrci.supabase.co/storage/v1/object/public/project-images/ccc/CYSampleDark.jpg",
+      "https://drtqywayjiarysxxbrci.supabase.co/storage/v1/object/public/project-images/ccc/CYSampleLight.jpg"
+    ]
   },
   {
     slug: "enotes",
