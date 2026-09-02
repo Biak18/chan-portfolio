@@ -72,6 +72,19 @@ export function ProjectPanel({ project }: { project: Project }) {
         )}
       </div>
 
+      {project.demoVideoUrl && (
+        <div className="mt-8 aspect-video overflow-hidden rounded-xl border border-border">
+          <iframe
+            src={project.demoVideoUrl}
+            title={`${project.title} demo video`}
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            className="h-full w-full"
+            loading="lazy"
+          />
+        </div>
+      )}
+
       {project.screenshots && project.screenshots.length > 0 && (
         <div className="mt-8 space-y-4">
           {project.screenshots.map((src) => (

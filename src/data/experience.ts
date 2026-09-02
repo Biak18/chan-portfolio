@@ -23,7 +23,7 @@ export const experience: ExperienceEntry[] = [
   {
     id: "g2sysnet-pm",
     type: "professional",
-    title: "Project Manager",
+    title: "Junior Assistant Project Manager",
     organization: "G2SysNet",
     period: "Feb 2025 ~ Aug 2025",
     description:
