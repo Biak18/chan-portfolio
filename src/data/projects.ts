@@ -7,7 +7,8 @@ export const projects: Project[] = [
     summary: "Offline-first contact directory for a local youth community.",
     overview:
       "An offline-first contact directory storing phone, birthday, and address info for a local youth community. Works fully offline via SQLite and syncs with Supabase, with birthday reminders delivered through Supabase Edge Functions and Firebase Cloud Messaging push notifications.",
-    thumbnail: "https://i.postimg.cc/MWTTDjzp/icon.png",
+    thumbnail:
+      "https://drtqywayjiarysxxbrci.supabase.co/storage/v1/object/public/project-images/ccc/ccc.png",
     techStack: [
       "React Native",
       "Expo",
@@ -27,8 +28,8 @@ export const projects: Project[] = [
     androidDownloadUrl:
       "https://github.com/Biak18/City-Youth-Contacts/releases/download/v1.0.1/CityYouth.apk",
     screenshots: [
-      "https://i.postimg.cc/DwmTqL17/CYSample-Dark.jpg",
-      "https://i.postimg.cc/dVDY8rGq/CYSample-Light.jpg",
+      "https://drtqywayjiarysxxbrci.supabase.co/storage/v1/object/public/project-images/ccc/CYSampleDark.jpg",
+      "https://drtqywayjiarysxxbrci.supabase.co/storage/v1/object/public/project-images/ccc/CYSampleLight.jpg",
     ],
   },
   {
