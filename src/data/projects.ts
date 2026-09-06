@@ -8,7 +8,7 @@ export const projects: Project[] = [
     overview:
       "An offline-first contact directory storing phone, birthday, and address info for a local youth community. Works fully offline via SQLite and syncs with Supabase, with birthday reminders delivered through Supabase Edge Functions and Firebase Cloud Messaging push notifications.",
     thumbnail:
-      "https://drtqywayjiarysxxbrci.supabase.co/storage/v1/object/public/project-images/ccc/ccc.png",
+      "https://sb-sg.netlify.app/api/storage/v1/object/public/project-images/ccc/ccc.png",
     techStack: [
       "React Native",
       "Expo",
@@ -28,8 +28,8 @@ export const projects: Project[] = [
     androidDownloadUrl:
       "https://github.com/Biak18/City-Youth-Contacts/releases/download/v1.0.1/CityYouth.apk",
     screenshots: [
-      "https://drtqywayjiarysxxbrci.supabase.co/storage/v1/object/public/project-images/ccc/CYSampleDark.jpg",
-      "https://drtqywayjiarysxxbrci.supabase.co/storage/v1/object/public/project-images/ccc/CYSampleLight.jpg",
+      "https://sb-sg.netlify.app/api/storage/v1/object/public/project-images/ccc/CYSampleDark.jpg",
+      "https://sb-sg.netlify.app/api/storage/v1/object/public/project-images/ccc/CYSampleLight.jpg",
     ],
   },
   {
@@ -40,7 +40,7 @@ export const projects: Project[] = [
     overview:
       "An ERP system built as a desktop application, handles core business operations with a WinForms front end and Supabase as the backend. Currently in active development.",
     thumbnail:
-      "https://drtqywayjiarysxxbrci.supabase.co/storage/v1/object/public/project-images/enotes.png",
+      "https://sb-sg.netlify.app/api/storage/v1/object/public/project-images/enotes.png",
     techStack: [
       "C#",
       ".NET Framework",
@@ -66,7 +66,7 @@ export const projects: Project[] = [
   //   overview:
   //     "A neubrutalist-tactile design system for React Native, hard offset shadows, press-to-sink buttons, and recessed inputs that all react like physical objects instead of flat UI.",
   //   thumbnail:
-  //     "https://drtqywayjiarysxxbrci.supabase.co/storage/v1/object/public/project-images/shadow.jpg",
+  //     "https://sb-sg.netlify.app/api/storage/v1/object/public/project-images/shadow.jpg",
   //   techStack: ["React Native", "Reanimated", "Zustand", "Expo"],
   //   architecture:
   //     "A tactile component system powered by React Native Reanimated spring physics and custom transform calculations. It bypasses platform-inconsistent native shadow engines by mathematically rendering hard offset paths and dynamic coordinate translations, backed by Zustand for elevation and state control.",
@@ -87,14 +87,14 @@ export const projects: Project[] = [
     overview:
       "A React Native (Expo) inventory app for small businesses to manage products, stock movements, categories, and suppliers. It supports multi-tenant organizations with role-based access, offline-first workflows with a SQLite sync queue, barcode scanning, low-stock notifications, and team invites — designed as a real product architecture rather than a tutorial demo.",
     thumbnail:
-      "https://bgqrgzyyeycmkvaiagfo.supabase.co/storage/v1/object/public/sample/android-icon-foreground.png", // TODO: add
+      "https://sb-sg.netlify.app/api/storage/v1/object/public/project-images/stockflow/android-icon-foreground.png", // TODO: add
     screenshots: [
-      "https://bgqrgzyyeycmkvaiagfo.supabase.co/storage/v1/object/public/sample/sf_login.jpg",
-      "https://bgqrgzyyeycmkvaiagfo.supabase.co/storage/v1/object/public/sample/sf_signup.jpg",
-      "https://bgqrgzyyeycmkvaiagfo.supabase.co/storage/v1/object/public/sample/sf_dashboard.jpg",
-      "https://bgqrgzyyeycmkvaiagfo.supabase.co/storage/v1/object/public/sample/sf_products.jpg",
-      "https://bgqrgzyyeycmkvaiagfo.supabase.co/storage/v1/object/public/sample/sf_stock.jpg",
-      "https://bgqrgzyyeycmkvaiagfo.supabase.co/storage/v1/object/public/sample/sf_settings.jpg",
+      "https://sb-sg.netlify.app/api/storage/v1/object/public/project-images/stockflow/sf_login.jpg",
+      "https://sb-sg.netlify.app/api/storage/v1/object/public/project-images/stockflow/sf_signup.jpg",
+      "https://sb-sg.netlify.app/api/storage/v1/object/public/project-images/stockflow/sf_dashboard.jpg",
+      "https://sb-sg.netlify.app/api/storage/v1/object/public/project-images/stockflow/sf_products.jpg",
+      "https://sb-sg.netlify.app/api/storage/v1/object/public/project-images/stockflow/sf_stock.jpg",
+      "https://sb-sg.netlify.app/api/storage/v1/object/public/project-images/stockflow/sf_settings.jpg",
     ], // TODO: add
     techStack: [
       "React Native",
@@ -140,20 +140,20 @@ export const projects: Project[] = [
 It is a single Expo app that connects to Supabase for auth, database and realtime. I focused a lot on small details like precise delivery with MapLink pins, chat that switches from shop to driver after assignment, and forms that feel modern with floating labels. There is also an internal dev switcher so I can test all three roles on one phone without logging out again and again.`,
 
     thumbnail:
-      "https://wiscnurivaskypxuldjz.supabase.co/storage/v1/object/public/docs/android-icon-foreground.png",
+      "https://sb-sg.netlify.app/api/storage/v1/object/public/project-images/brewly/android-icon-foreground.png",
     screenshots: [
-      "https://wiscnurivaskypxuldjz.supabase.co/storage/v1/object/public/docs/docs_home.jpg",
-      "https://wiscnurivaskypxuldjz.supabase.co/storage/v1/object/public/docs/docs_home2.jpg",
-      "https://wiscnurivaskypxuldjz.supabase.co/storage/v1/object/public/docs/docs_shopdetails.jpg",
-      "https://wiscnurivaskypxuldjz.supabase.co/storage/v1/object/public/docs/docs_store.jpg",
-      "https://wiscnurivaskypxuldjz.supabase.co/storage/v1/object/public/docs/docs_order_tracking.jpg",
-      "https://wiscnurivaskypxuldjz.supabase.co/storage/v1/object/public/docs/docs_orderchat.jpg",
-      "https://wiscnurivaskypxuldjz.supabase.co/storage/v1/object/public/docs/docs_deliveries.jpg",
-      "https://wiscnurivaskypxuldjz.supabase.co/storage/v1/object/public/docs/docs_profiles.jpg",
-      "https://wiscnurivaskypxuldjz.supabase.co/storage/v1/object/public/docs/docs_notifications.jpg",
+      "https://sb-sg.netlify.app/api/storage/v1/object/public/project-images/brewly/docs_home.jpg",
+      "https://sb-sg.netlify.app/api/storage/v1/object/public/project-images/brewly/docs_home2.jpg",
+      "https://sb-sg.netlify.app/api/storage/v1/object/public/project-images/brewly/docs_shopdetails.jpg",
+      "https://sb-sg.netlify.app/api/storage/v1/object/public/project-images/brewly/docs_store.jpg",
+      "https://sb-sg.netlify.app/api/storage/v1/object/public/project-images/brewly/docs_order_tracking.jpg",
+      "https://sb-sg.netlify.app/api/storage/v1/object/public/project-images/brewly/docs_orderchat.jpg",
+      "https://sb-sg.netlify.app/api/storage/v1/object/public/project-images/brewly/docs_deliveries.jpg",
+      "https://sb-sg.netlify.app/api/storage/v1/object/public/project-images/brewly/docs_profiles.jpg",
+      "https://sb-sg.netlify.app/api/storage/v1/object/public/project-images/brewly/docs_notifications.jpg",
     ],
     demoVideoUrl:
-      "https://wiscnurivaskypxuldjz.supabase.co/storage/v1/object/public/docs/brewly-demo.mp4",
+      "https://sb-sg.netlify.app/api/storage/v1/object/public/project-images/brewly/brewly-demo.mp4",
     techStack: [
       "Expo SDK 57",
       "React Native",
