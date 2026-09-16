@@ -198,4 +198,47 @@ Forms were another issue. The old inputs only used placeholder which looked outd
       "https://github.com/Biak18/Brewly/releases/download/v1.0.0/Brewly.apk",
     featured: true,
   },
+  {
+    slug: "lune",
+    title: "LUNE: Premium Dress Boutique",
+    summary:
+      "A premium mobile boutique for discovering and shopping dresses, with variant level inventory, wishlist, checkout, order tracking, loyalty, an AI stylist, and an in app admin console.",
+    overview:
+      "LUNE is a customer facing fashion ecommerce app built with React Native, Expo 57, and TypeScript, backed by Supabase (Postgres, Auth, Storage) plus an ASP.NET DressShop API. Shoppers browse a variant aware catalog (size and color drive real inventory), save favorites to a wishlist, check out with server verified pricing, and track orders through a full status state machine, with shipping addresses, loyalty rewards, and a Gemini powered style assistant plus a deterministic Style Finder on top. An admin persona manages products, low stock inventory, and orders from inside the same app, protected by Supabase RLS rather than client side checks. The UI follows a strict atelier system: Newsreader serif, paper and ink palette with one clay accent, hairlines over cards, and motion that honors reduce motion everywhere.",
+    thumbnail:
+      "https://res.cloudinary.com/g3jhqsca/image/upload/v1789529262/android-icon-foreground.png",
+    techStack: [
+      "Expo 57",
+      "React Native",
+      "TypeScript",
+      "Expo Router",
+      "Supabase (Postgres, Auth, Storage)",
+      "ASP.NET Web API",
+      "TanStack Query",
+      "Zustand",
+      "Shopify FlashList",
+      "Reanimated",
+      "Lottie",
+      "React Hook Form + Zod",
+      "EAS Build / Updates",
+    ],
+    keyFeatures: [
+      "Variant based catalog (color/size inventory, filters, search, pagination)",
+      "Wishlist with optimistic add to bag",
+      "Cart with server verified pricing and stock checks",
+      "Checkout with addresses, order snapshots, and status tracking",
+      "Loyalty points, tiers, and rewards",
+      "AI fashion assistant (Gemini) and deterministic Style Finder",
+      "Admin console for products, inventory, and order fulfillment",
+      "Branded loading, empty, and error states on every screen",
+    ],
+    architecture:
+      "File based Expo Router screens stay thin and delegate to feature slices organized as services, hooks, and components. All server state lives in TanStack Query with targeted invalidation; Zustand holds only ephemeral UI state like filters. Every route renders through one shared Screen shell (single safe area inset), one LoadingState, and one skeleton family, all styled from centralized color, spacing, and typography tokens. Orders persist price and variant snapshots so history never depends on live catalog data.",
+    challenges:
+      "Modeling inventory per variant instead of per product without leaking complexity into the UI; taming inconsistent top spacing across 25 routes by converging on a single Screen component; getting keyboard behavior right for both a chat input and long address forms; keeping Lottie animations working on native with a clean web fallback; and enforcing admin authorization in RLS and database functions instead of trusting the client.",
+    lessonsLearned:
+      "One shared screen shell eliminates a whole class of spacing bugs. Skeletons matched to each layout feel faster than any spinner. Strictly separating server state (TanStack Query) from client state (Zustand) keeps data flow predictable as features grow. Writing product, architecture, and UI rules down as living docs keeps every change consistent. Designing loading, empty, and error states up front, plus reduce motion and accessibility labels from day one, is cheaper than retrofitting them.",
+    githubUrl: "https://github.com/Biak18/Lune",
+    featured: true,
+  },
 ];
