@@ -207,6 +207,12 @@ Forms were another issue. The old inputs only used placeholder which looked outd
       "LUNE is a customer facing fashion ecommerce app built with React Native, Expo 57, and TypeScript, backed by Supabase (Postgres, Auth, Storage) plus an ASP.NET DressShop API. Shoppers browse a variant aware catalog (size and color drive real inventory), save favorites to a wishlist, check out with server verified pricing, and track orders through a full status state machine, with shipping addresses, loyalty rewards, and a Gemini powered style assistant plus a deterministic Style Finder on top. An admin persona manages products, low stock inventory, and orders from inside the same app, protected by Supabase RLS rather than client side checks. The UI follows a strict atelier system: Newsreader serif, paper and ink palette with one clay accent, hairlines over cards, and motion that honors reduce motion everywhere.",
     thumbnail:
       "https://res.cloudinary.com/g3jhqsca/image/upload/v1789529262/android-icon-foreground.png",
+    screenshots: [
+      "https://res.cloudinary.com/g3jhqsca/image/upload/v1789551102/lune_01.png",
+      "https://res.cloudinary.com/g3jhqsca/image/upload/v1789551102/lune_02.png",
+      "https://res.cloudinary.com/g3jhqsca/image/upload/v1789551102/lune_03.png",
+      "https://res.cloudinary.com/g3jhqsca/image/upload/v1789551102/lune_04.png",
+    ],
     techStack: [
       "Expo 57",
       "React Native",
