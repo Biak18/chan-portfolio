@@ -140,7 +140,7 @@ export const projects: Project[] = [
 It is a single Expo app that connects to Supabase for auth, database and realtime. I focused a lot on small details like precise delivery with MapLink pins, chat that switches from shop to driver after assignment, and forms that feel modern with floating labels. There is also an internal dev switcher so I can test all three roles on one phone without logging out again and again.`,
 
     thumbnail:
-      "https://res.cloudinary.com/g3jhqsca/image/upload/v1788665619/android-icon-foreground.png",
+      "https://res.cloudinary.com/g3jhqsca/image/upload/v1789551785/brewly-icon.png",
     //https://res.cloudinary.com/g3jhqsca/image/upload/v1788665619/docs_home.jpg
     screenshots: [
       "https://res.cloudinary.com/g3jhqsca/image/upload/v1788665619/docs_home.jpg",
