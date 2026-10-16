@@ -2,6 +2,45 @@ import type { Project } from "../types/project";
 
 export const projects: Project[] = [
   {
+    slug: "dormitory-manager",
+    title: "Dormitory Manager",
+    summary:
+      "Bilingual dormitory management web app — rooms, household assignments, received income, expenses, and Myanmar-language financial reports.",
+    overview:
+      "An internal web app replacing a manually maintained Excel workflow for a small dormitory. The React + Vite + TypeScript frontend (Myanmar/English) talks to an ASP.NET Core Clean Architecture API — thin controllers, MediatR vertical slices, domain-enforced rules, EF Core over Supabase Postgres with Supabase Auth. Viewing is public; all mutations are owner-only. Financial corrections use void-and-replace, so history is never overwritten or hard-deleted. Frontend on Netlify, API on Render.",
+    // TODO: replace with a real screenshot.
+    thumbnail:
+      "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='450'%3E%3Crect width='800' height='450' fill='%23123b6d'/%3E%3Ccircle cx='400' cy='200' r='72' fill='none' stroke='%23ffffff' stroke-opacity='0.35' stroke-width='6'/%3E%3Crect x='372' y='168' width='56' height='64' rx='4' fill='%23ffffff'/%3E%3Ctext x='400' y='330' font-family='system-ui,sans-serif' font-size='44' font-weight='700' fill='%23ffffff' text-anchor='middle'%3EDormitory Manager%3C/text%3E%3C/svg%3E",
+    techStack: [
+      "React",
+      "TypeScript",
+      "Vite",
+      "ASP.NET Core (.NET 10)",
+      "MediatR",
+      "Entity Framework Core",
+      "Supabase (Postgres, Auth)",
+      "Render",
+      "Netlify",
+    ],
+    keyFeatures: [
+      "9 rentable rooms with occupancy derived from active assignments",
+      "Household-level assignments with one-active-per-room database invariant",
+      "Income recorded only when money is received — never auto-generated",
+      "Void-and-replace corrections with full audit trail, no hard deletes",
+      "Monthly, yearly, and category reports that reconcile to transactions",
+      "Myanmar/English UI with public viewing and owner-only mutations",
+    ],
+    architecture:
+      "Thin controllers translate HTTP to MediatR commands and queries organized in vertical feature slices, with FluentValidation running in the pipeline and domain entities enforcing invariants (default rent rules, positive amounts, single active assignment). EF Core maps to snake_case Supabase tables including a partial unique index for occupancy. Supabase JWTs are validated against the project's JWKS, and roles come from a server-controlled profiles table with a handle_new_user trigger. The frontend mirrors the same rules in a mock API layer, and both sides share one machine-readable error-code contract.",
+    challenges:
+      "Npgsql rejects non-UTC timestamps, so every write path normalizes to UTC while reports keep bucketing by Myanmar calendar days. A void-and-replace flow initially failed on Postgres with a foreign-key violation because EF didn't know the self-link ordering — fixed by modeling the relationship explicitly, with SQLite relational tests guarding it since InMemory can't catch FK issues. Timezone boundaries, whole-kyat validation, and keeping the mock API behaviorally identical to the real one took steady cross-checking.",
+    lessonsLearned:
+      "For other people's money, auditability beats convenience: void-and-replace is more work than edit-in-place but means no number can ever silently change. Small dormitory staff need software that reconciles — every total on screen traces back to visible transaction rows, and that single property shaped the database constraints, the API contract, and the UI.",
+    githubUrl: "https://github.com/Biak18/dormitory-management", // private repo — no public URL provided
+    liveUrl: "https://dormitory-rent.netlify.app",
+    featured: true,
+  },
+  {
     slug: "city-youth-contact",
     title: "City Youth Contact",
     summary: "Offline-first contact directory for a local youth community.",
